@@ -29,19 +29,17 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) COLLATE latin1_german1_ci NOT NULL,
   `email` varchar(50) COLLATE latin1_german1_ci NOT NULL,
   `login` varchar(50) COLLATE latin1_german1_ci NOT NULL,
-  `password` varchar(20) COLLATE latin1_german1_ci NOT NULL
+  `password` varchar(20) COLLATE latin1_german1_ci NOT NULL,
+  CONSTRAINT idPk PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci;
 
 --
 -- Дамп данных таблицы `users`
 --
-
-INSERT INTO `users` (`id`, `name`, `email`, `login`, `password`) VALUES
-(4, 'LEN', 'alex_goda@mail.ru', 'Mlemos', '123');
 
 --
 -- Индексы сохранённых таблиц
@@ -50,9 +48,6 @@ INSERT INTO `users` (`id`, `name`, `email`, `login`, `password`) VALUES
 --
 -- Индексы таблицы `users`
 --
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
-
 --
 -- AUTO_INCREMENT для сохранённых таблиц
 --

@@ -29,13 +29,14 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `audiobooks` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE latin1_german1_ci DEFAULT NULL,
   `author` varchar(255) COLLATE latin1_german1_ci DEFAULT NULL,
   `price` float DEFAULT NULL,
   `genre` varchar(255) COLLATE latin1_german1_ci DEFAULT NULL,
   `bitrate` int(11) DEFAULT NULL,
-  `img` text COLLATE latin1_german1_ci NOT NULL
+  `img` text COLLATE latin1_german1_ci NOT NULL,
+  CONSTRAINT idPk PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci;
 
 --
@@ -45,9 +46,6 @@ CREATE TABLE `audiobooks` (
 --
 -- Индексы таблицы `audiobooks`
 --
-ALTER TABLE `audiobooks`
-  ADD PRIMARY KEY (`id`);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

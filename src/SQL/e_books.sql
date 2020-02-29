@@ -29,25 +29,19 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `e_books` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE latin1_german1_ci DEFAULT NULL,
   `author` varchar(255) COLLATE latin1_german1_ci DEFAULT NULL,
   `price` float DEFAULT NULL,
   `genre` varchar(255) COLLATE latin1_german1_ci DEFAULT NULL,
   `format` varchar(255) COLLATE latin1_german1_ci DEFAULT NULL,
-  `img` text COLLATE latin1_german1_ci NOT NULL
+  `img` text COLLATE latin1_german1_ci NOT NULL,
+  CONSTRAINT idPk PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_german1_ci;
 
 --
 -- Дамп данных таблицы `e_books`
 --
-
-INSERT INTO `e_books` (`id`, `name`, `author`, `price`, `genre`, `format`, `img`) VALUES
-(5, 'Michael', 'Jordan', 29.99, 'baseball', 'asd', 'https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzA5OC81NzYvb3JpZ2luYWwvZGVuYWxpLXRvbnMtb2YtcG9vcC5qcGc='),
-(6, 'Michael', 'Jordan', 29.99, 'baseball', 'asd', 'https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzA5OC81NzYvb3JpZ2luYWwvZGVuYWxpLXRvbnMtb2YtcG9vcC5qcGc='),
-(7, 'Michael', 'Jordan', 29.99, 'baseball', 'asd', 'https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzA5OC81NzYvb3JpZ2luYWwvZGVuYWxpLXRvbnMtb2YtcG9vcC5qcGc='),
-(8, 'Michael', 'Jordan', 29.99, 'baseball', 'asd', 'https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzA5OC81NzYvb3JpZ2luYWwvZGVuYWxpLXRvbnMtb2YtcG9vcC5qcGc='),
-(9, 'Michael', 'Jordan', 29.99, 'baseball', 'asd', 'https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzA5OC81NzYvb3JpZ2luYWwvZGVuYWxpLXRvbnMtb2YtcG9vcC5qcGc=');
 
 --
 -- Индексы сохранённых таблиц
